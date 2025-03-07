@@ -7,7 +7,7 @@ import TestimonialsSection from './components/sections/TestimonialsSection';
 import FAQSection from './components/sections/FAQSection';
 import BookingSection from './components/sections/BookingSection';
 import ContactSection from './components/sections/ContactSection';
-import Footer from './components/Footer/Footer';
+import Footer from './components/sections/Footer';
 import BackgroundAnimation from './components/three/BackgroundAnimation';
 import styles from './page.module.css';
 

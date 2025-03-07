@@ -1,7 +1,10 @@
+"use client"
+
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useThree } from '@react-three/fiber';
 import { MathUtils } from 'three';
+import * as THREE from 'three';
 import styles from './BackgroundAnimation.module.css';
 
 // Wave component that uses simplex noise for a natural wave effect

@@ -1,38 +1,24 @@
-"use client";
+"use client"
 
-import React, { useState, useEffect } from 'react';
-// Remove react-hook-form completely
-import { format, addDays, startOfDay } from 'date-fns';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { format, addDays, startOfDay, addWeeks } from 'date-fns';
 import styles from './BookingSection.module.css';
 
+const availableTimes = [
+  '9:00 AM', '10:00 AM', '11:00 AM', 
+  '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM'
+];
+
 const BookingSection = () => {
-  // Form state
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    reason: '',
-    notes: '',
-    consent: false
-  });
-  
-  // Form validation
-  const [errors, setErrors] = useState({});
-  
-  // Booking state
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [availableDates, setAvailableDates] = useState([]);
   
-  // Available time slots
-  const availableTimes = [
-    '9:00 AM', '10:00 AM', '11:00 AM', 
-    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM'
-  ];
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
   
   // Generate available dates (Next 2 weeks excluding weekends)
-  useEffect(() => {
+  const generateAvailableDates = () => {
     const dates = [];
     const startDate = startOfDay(new Date());
     
@@ -47,93 +33,40 @@ const BookingSection = () => {
       }
     }
     
-    setAvailableDates(dates);
-  }, []);
-  
-  // Handle input changes
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-    
-    // Clear error for this field when user types
-    if (errors[name]) {
-      setErrors(prev => {
-        const newErrors = {...prev};
-        delete newErrors[name];
-        return newErrors;
-      });
-    }
+    return dates;
   };
   
-  // Handle date selection
+  const availableDates = generateAvailableDates();
+  
   const handleDateClick = (date) => {
     setSelectedDate(date);
     setSelectedTime(null);
   };
   
-  // Handle time selection
   const handleTimeClick = (time) => {
     setSelectedTime(time);
   };
   
-  // Validate form
-  const validateForm = () => {
-    const newErrors = {};
+  const onSubmit = (data) => {
+    // In a real application, you would send this data to your backend
+    console.log({
+      ...data,
+      appointmentDate: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : null,
+      appointmentTime: selectedTime
+    });
     
-    if (!formData.name.trim()) newErrors.name = "Name is required";
+    // Show success message
+    setIsSubmitted(true);
     
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
-      newErrors.email = "Invalid email address";
-    }
+    // Reset form
+    reset();
+    setSelectedDate(null);
+    setSelectedTime(null);
     
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
-    if (!formData.reason) newErrors.reason = "Please select a reason";
-    if (!selectedDate) newErrors.date = "Please select a date";
-    if (!selectedTime) newErrors.time = "Please select a time";
-    if (!formData.consent) newErrors.consent = "You must consent to proceed";
-    
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-  
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    if (validateForm()) {
-      // Form is valid, process submission
-      console.log({
-        ...formData,
-        appointmentDate: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : null,
-        appointmentTime: selectedTime
-      });
-      
-      // Show success message
-      setIsSubmitted(true);
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        reason: '',
-        notes: '',
-        consent: false
-      });
-      setSelectedDate(null);
-      setSelectedTime(null);
-      
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 5000);
   };
   
   return (
@@ -154,17 +87,15 @@ const BookingSection = () => {
           </div>
         ) : (
           <div className={styles.bookingContainer}>
-            <form onSubmit={handleSubmit} className={styles.bookingForm}>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.bookingForm}>
               <div className={styles.formGroup}>
                 <label htmlFor="name">Full Name *</label>
                 <input 
                   type="text" 
                   id="name" 
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
+                  {...register("name", { required: "Name is required" })} 
                 />
-                {errors.name && <span className={styles.error}>{errors.name}</span>}
+                {errors.name && <span className={styles.error}>{errors.name.message}</span>}
               </div>
               
               <div className={styles.formGroup}>
@@ -172,11 +103,15 @@ const BookingSection = () => {
                 <input 
                   type="email" 
                   id="email" 
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
+                  {...register("email", { 
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Invalid email address"
+                    }
+                  })} 
                 />
-                {errors.email && <span className={styles.error}>{errors.email}</span>}
+                {errors.email && <span className={styles.error}>{errors.email.message}</span>}
               </div>
               
               <div className={styles.formGroup}>
@@ -184,20 +119,16 @@ const BookingSection = () => {
                 <input 
                   type="tel" 
                   id="phone" 
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
+                  {...register("phone", { required: "Phone number is required" })} 
                 />
-                {errors.phone && <span className={styles.error}>{errors.phone}</span>}
+                {errors.phone && <span className={styles.error}>{errors.phone.message}</span>}
               </div>
               
               <div className={styles.formGroup}>
                 <label htmlFor="reason">Reason for Visit *</label>
                 <select 
                   id="reason" 
-                  name="reason"
-                  value={formData.reason}
-                  onChange={handleInputChange}
+                  {...register("reason", { required: "Please select a reason" })}
                 >
                   <option value="">Select a reason</option>
                   <option value="General Consultation">General Consultation</option>
@@ -207,17 +138,15 @@ const BookingSection = () => {
                   <option value="Urinary Incontinence">Urinary Incontinence</option>
                   <option value="Other">Other</option>
                 </select>
-                {errors.reason && <span className={styles.error}>{errors.reason}</span>}
+                {errors.reason && <span className={styles.error}>{errors.reason.message}</span>}
               </div>
               
               <div className={styles.formGroup}>
                 <label htmlFor="notes">Additional Notes</label>
                 <textarea 
                   id="notes" 
-                  name="notes"
                   rows="4" 
-                  value={formData.notes}
-                  onChange={handleInputChange}
+                  {...register("notes")}
                 ></textarea>
               </div>
               
@@ -237,7 +166,7 @@ const BookingSection = () => {
                       </button>
                     ))}
                   </div>
-                  {errors.date && <span className={styles.error}>{errors.date}</span>}
+                  {!selectedDate && <span className={styles.error}>Please select a date</span>}
                 </div>
                 
                 <div className={styles.timePicker}>
@@ -255,7 +184,7 @@ const BookingSection = () => {
                       </button>
                     ))}
                   </div>
-                  {errors.time && <span className={styles.error}>{errors.time}</span>}
+                  {selectedDate && !selectedTime && <span className={styles.error}>Please select a time</span>}
                 </div>
               </div>
               
@@ -263,14 +192,12 @@ const BookingSection = () => {
                 <input 
                   type="checkbox" 
                   id="consent" 
-                  name="consent"
-                  checked={formData.consent}
-                  onChange={handleInputChange}
+                  {...register("consent", { required: "You must consent to proceed" })} 
                 />
                 <label htmlFor="consent">
                   I consent to the processing of my personal data in accordance with the Privacy Policy
                 </label>
-                {errors.consent && <span className={styles.error}>{errors.consent}</span>}
+                {errors.consent && <span className={styles.error}>{errors.consent.message}</span>}
               </div>
               
               <button 
@@ -288,4 +215,4 @@ const BookingSection = () => {
   );
 };
 
-export default BookingSection; 
+export default BookingSection;
