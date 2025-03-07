@@ -1,0 +1,110 @@
+.about {
+    background-color: var(--background-alt);
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2.5rem;
+    color: var(--text);
+  }
+  
+  .underline {
+    height: 4px;
+    width: 80px;
+    background-color: var(--primary);
+    margin: 0 auto;
+  }
+  
+  .aboutContent {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .aboutImage {
+    flex: 1;
+  }
+  
+  .doctorOfficeImage {
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .aboutText {
+    flex: 1;
+  }
+  
+  .aboutText h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+  }
+  
+  .aboutText p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+  
+  .credentials {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+  }
+  
+  .credential {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .credentialNumber {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .credentialText {
+    color: var(--text-light);
+  }
+  
+  .affiliations ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+  }
+  
+  .affiliations li {
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 968px) {
+    .aboutContent {
+      flex-direction: column;
+    }
+    
+    .credentials {
+      flex-wrap: wrap;
+    }
+    
+    .credential {
+      flex: 1;
+      min-width: 120px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .sectionHeader h2 {
+      font-size: 2rem;
+    }
+    
+    .credentialNumber {
+      font-size: 2rem;
+    }
+  }

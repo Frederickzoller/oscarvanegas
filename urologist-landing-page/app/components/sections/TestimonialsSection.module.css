@@ -1,0 +1,115 @@
+.testimonials {
+    background-color: var(--background-alt);
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2.5rem;
+    color: var(--text);
+  }
+  
+  .underline {
+    height: 4px;
+    width: 80px;
+    background-color: var(--primary);
+    margin: 0.5rem auto 1.5rem;
+  }
+  
+  .sectionDescription {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-light);
+  }
+  
+  .testimonialsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonialCard {
+    background-color: var(--background);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .rating {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .starFilled {
+    color: var(--accent);
+  }
+  
+  .star {
+    color: #ddd;
+  }
+  
+  .testimonialText {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.7;
+  }
+  
+  .testimonialAuthor {
+    margin-top: auto;
+  }
+  
+  .authorName {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .authorTitle {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
+  .testimonialDots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .activeDot {
+    background-color: var(--primary);
+  }
+  
+  @media (max-width: 968px) {
+    .testimonialsContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .testimonialsContainer {
+      grid-template-columns: 1fr;
+    }
+    
+    .sectionHeader h2 {
+      font-size: 2rem;
+    }
+  }

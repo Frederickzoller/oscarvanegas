@@ -1,0 +1,211 @@
+.booking {
+    background-color: var(--background-alt);
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2.5rem;
+    color: var(--text);
+  }
+  
+  .underline {
+    height: 4px;
+    width: 80px;
+    background-color: var(--primary);
+    margin: 0.5rem auto 1.5rem;
+  }
+  
+  .sectionDescription {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-light);
+  }
+  
+  .bookingContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--background);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .formGroup label {
+    font-weight: 500;
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--radius-md);
+    font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+  }
+  
+  .formGroup textarea {
+    resize: vertical;
+  }
+  
+  .error {
+    color: #e53e3e;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  .dateTimeSelection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .datePicker h4,
+  .timePicker h4 {
+    margin-bottom: 0.75rem;
+  }
+  
+  .datesContainer {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+  }
+  
+  .dateButton {
+    min-width: 70px;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    background-color: var(--background);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+  }
+  
+  .dateButton span {
+    font-weight: 500;
+  }
+  
+  .selectedDate {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+  
+  .timesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .timeButton {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    background-color: var(--background);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+  }
+  
+  .timeButton:disabled {
+    background-color: #f5f5f5;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .selectedTime {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+  
+  .gdprConsent {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .gdprConsent input {
+    margin-top: 0.25rem;
+  }
+  
+  .submitButton {
+    align-self: center;
+    min-width: 200px;
+  }
+  
+  .submitButton:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .successMessage {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f0fff4;
+    border-left: 4px solid #48bb78;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+  }
+  
+  .successMessage h3 {
+    color: #2f855a;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .bookingContainer {
+      padding: 1.5rem;
+    }
+    
+    .sectionHeader h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .dateTimeSelection {
+      flex-direction: column;
+    }
+    
+    .datesContainer,
+    .timesContainer {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+    
+    .dateButton,
+    .timeButton {
+      flex-shrink: 0;
+    }
+    
+    .gdprConsent {
+      flex-direction: column;
+    }
+    
+    .submitButton {
+      width: 100%;
+    }
+  }

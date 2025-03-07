@@ -1,0 +1,94 @@
+.hero {
+    padding-top: 120px; /* Account for fixed header */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .heroContent {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .heroText {
+    flex: 1;
+  }
+  
+  .heroText h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: var(--text);
+  }
+  
+  .heroText p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    max-width: 90%;
+  }
+  
+  .ctaButtons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .heroImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .doctorImage {
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 968px) {
+    .heroContent {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 3rem;
+    }
+    
+    .heroText h1 {
+      font-size: 2.5rem;
+    }
+    
+    .heroText p {
+      max-width: 100%;
+    }
+    
+    .ctaButtons {
+      justify-content: center;
+    }
+    
+    .heroImage {
+      max-width: 100%;
+    }
+    
+    .doctorImage {
+      max-width: 80%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .ctaButtons {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .ctaButtons a {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .heroText h1 {
+      font-size: 2rem;
+    }
+  }
