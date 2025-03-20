@@ -9,23 +9,23 @@ const HeroSection = () => {
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
-            <h1>Expert Urological Care For Your Health Needs</h1>
+            <h1>Atención Urológica Especializada Para El Cuidado De Su Salud</h1>
             <p>
-              Dr. Smith provides personalized urological treatment with compassion and the latest evidence-based techniques. With over 15 years of experience, your health is in trusted hands.
+            Nuestro enfoque en urología combina experiencia, personalización y tecnología de última generación para lograr los mejores resultados y el bienestar del paciente. 
             </p>
             <div className={styles.ctaButtons}>
               <Link href="#booking" className="button button-primary">
-                Book a Consultation
+                Agendar Consulta
               </Link>
               <Link href="#services" className="button button-secondary">
-                Our Services
+                Nuestros servicios
               </Link>
             </div>
           </div>
           <div className={styles.heroImage}>
             <Image 
               src="/doctor.jpg" 
-              alt="Dr. Smith - Urologist" 
+              alt="Dr. Vanegas - Urologo" 
               width={500} 
               height={600} 
               priority

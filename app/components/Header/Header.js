@@ -28,7 +28,7 @@ const Header = () => {
         
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
           <ul>
-            <li><Link href="#about" onClick={() => setMenuOpen(false)}>Acerca de mi</Link></li>
+            <li><Link href="#about" onClick={() => setMenuOpen(false)}>Acerca de </Link></li>
             <li><Link href="#services" onClick={() => setMenuOpen(false)}>Servicios</Link></li>
             <li><Link href="#testimonials" onClick={() => setMenuOpen(false)}>Testimonios</Link></li>
             <li><Link href="#faq" onClick={() => setMenuOpen(false)}>FAQ</Link></li>

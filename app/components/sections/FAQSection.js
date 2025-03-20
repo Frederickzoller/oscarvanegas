@@ -6,13 +6,13 @@ import styles from './FAQSection.module.css';
 const faqs = [
   {
     id: 1,
-    question: "What should I expect during my first consultation?",
-    answer: "During your first consultation, Dr. Smith will review your medical history, discuss your symptoms and concerns, and perform any necessary examinations. He'll explain your condition, answer questions, and develop a personalized treatment plan. Please bring your medical records, list of medications, and insurance information."
+    question: "¿Cómo será mi primera consulta?",
+    answer: "En su primera visita, el Dr. Vanegas analizará su historial médico, evaluará sus síntomas y atenderá sus inquietudes. También llevará a cabo los exámenes pertinentes según sea necesario. Le proporcionará una explicación detallada de su condición, responderá sus dudas y diseñará un plan de tratamiento adaptado a sus necesidades. Le recomendamos traer sus expedientes médicos, una lista de sus medicamentos actuales y la información de su seguro."
   },
   {
     id: 2,
-    question: "How do I prepare for urological procedures?",
-    answer: "Preparation varies depending on the procedure. Dr. Smith's team will provide specific instructions prior to your appointment. Generally, you may need to fast for a certain period, adjust medications, arrange transportation home for certain procedures, and complete any required pre-procedure testing. Always follow the specific guidelines provided for your procedure."
+    question: "¿Cómo debo prepararme para los procedimientos quirúrgicos?",
+    answer: "La preparación varía según el procedimiento. El equipo del Dr. Vanegas le proporcionará instrucciones específicas antes de su cita. Generalmente, es posible que deba ayunar durante un período determinado, ajustar su medicación y completar cualquier prueba previa requerida. Siga siempre las indicaciones específicas proporcionadas para su procedimiento."
   },
   {
     id: 3,
@@ -47,10 +47,10 @@ const FAQSection = () => {
     <section id="faq" className={styles.faq}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2>Frequently Asked Questions</h2>
+          <h2>Preguntas Frecuentes</h2>
           <div className={styles.underline}></div>
           <p className={styles.sectionDescription}>
-            Find answers to common questions about urological care and Dr. Smith's practice.
+          Resuelve tus dudas sobre la atención urológica y la práctica del Dr. Vanegas.
           </p>
         </div>
         
