@@ -21,18 +21,18 @@ const faqs = [
   },
   {
     id: 4,
-    question: "How long is the recovery for minimally invasive procedures?",
-    answer: "Recovery time varies by procedure and individual health factors. Most minimally invasive urological procedures have significantly shorter recovery times compared to traditional surgery. Many patients return to normal activities within 1-2 weeks, though complete recovery might take longer. Dr. Smith will provide specific recovery guidelines for your procedure."
+    question: "¿Cuánto dura la recuperación de los procedimientos mínimamente invasivos?",
+    answer: "El tiempo de recuperación varía según el procedimiento y los factores de salud individuales. La mayoría de los procedimientos urológicos mínimamente invasivos tienen tiempos de recuperación significativamente más cortos en comparación con la cirugía tradicional. Muchos pacientes pueden retomar sus actividades normales en un plazo de 1 a 2 semanas, aunque la recuperación total puede tomar más tiempo. El Dr. Vanegas le proporcionará pautas específicas para su recuperación."
   },
   {
     id: 5,
-    question: "Do I need a referral to see Dr. Smith?",
-    answer: "While some insurance plans require referrals to see specialists, many patients see Dr. Smith without a referral. Check with your insurance provider regarding their referral requirements. Our staff can help guide you through this process if needed."
+    question: "¿Necesito una referencia para ver al Dr. Vanegas?",
+    answer: "Algunos planes de seguro requieren una referencia para consultar a un especialista, pero muchos pacientes pueden ver al Dr. Vanegas sin necesidad de una. Verifique con su proveedor de seguro si se requiere una referencia. Nuestro equipo puede ayudarle con este proceso si es necesario."
   },
   {
     id: 6,
-    question: "How can I manage urological symptoms at home?",
-    answer: "While proper medical care is essential, there are lifestyle measures that can help manage some urological symptoms. These include staying well-hydrated, maintaining a healthy diet, regular exercise, practicing good hygiene, and following medication schedules. Dr. Smith will provide personalized recommendations based on your specific condition."
+    question: "¿Cómo puedo manejar los síntomas urológicos en casa?",
+    answer: "Si bien la atención médica adecuada es esencial, existen medidas en el estilo de vida que pueden ayudar a controlar algunos síntomas urológicos. Estas incluyen mantenerse bien hidratado, llevar una alimentación saludable, realizar ejercicio regularmente, mantener una buena higiene y seguir el tratamiento médico indicado. El Dr. Vanegas le proporcionará recomendaciones personalizadas según su condición específica."
   }
 ];
 

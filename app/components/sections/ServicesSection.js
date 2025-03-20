@@ -4,38 +4,38 @@ import styles from './ServicesSection.module.css';
 const services = [
   {
     id: 1,
-    title: "General Urology",
-    description: "Comprehensive care for a wide range of urological conditions including UTIs, prostate issues, and bladder disorders.",
+    title: "Urología General",
+    description: "Ofrecemos atención especializada a través de consulta externa, consulta general especializada en urológia y manejo de enfermedades prostáticas, garantizando un enfoque personalizado y de calidad.",
     icon: "🔍"
   },
   {
     id: 2,
-    title: "Men's Health",
-    description: "Specialized services for male urological conditions including erectile dysfunction, testosterone management, and prostate health.",
+    title: "Salud Masculina",
+    description: "Brindamos atención especializada para la salud urológica del hombre, con enfoque en el diagnóstico y tratamiento de la disfunción eréctil, así como en la prevención y cuidado integral de la próstata.",
     icon: "♂️"
   },
   {
     id: 3,
-    title: "Kidney Stone Treatment",
-    description: "Advanced treatment options for kidney stones including extracorporeal shock wave lithotripsy (ESWL) and minimally invasive procedures.",
+    title: "Diagnosticos",
+    description: "Realizamos estudios especializados para la detección y evaluación de enfermedades urológicas, incluyendo procedimientos endoscópicos, ecográficos y biopsias para un diagnóstico preciso de la vejiga, la próstata y la uretra.",
     icon: "💎"
   },
   {
     id: 4,
-    title: "Urologic Oncology",
-    description: "Expert diagnosis and treatment of urological cancers including prostate, bladder, kidney, and testicular cancer.",
+    title: "Tratamientos de Cáncer",
+    description: "Evaluación y tratamiento especializado de cánceres urológicos, como el de próstata, vejiga, riñón y testículos.",
     icon: "🔬"
   },
   {
     id: 5,
-    title: "Minimally Invasive Surgery",
-    description: "State-of-the-art minimally invasive and robotic surgical procedures that minimize recovery time and improve outcomes.",
+    title: "Tratamiento con Medicamentos Intravesicales",
+    description: "Ofrecemos terapias especializadas como instilaciones urinarias para cáncer de vejiga y cistitis intersticial, recambio de sondas y aplicación de toxina botulínica para trastornos vesicales.",
     icon: "🤖"
   },
   {
     id: 6,
-    title: "Urinary Incontinence",
-    description: "Comprehensive evaluation and treatment options for both male and female urinary incontinence conditions.",
+    title: "Incontinencia Urinaria",
+    description: "Evaluación y tratamiento integral de las afecciones de incontinencia urinaria, tanto en hombres como en mujeres, garantizando un enfoque personalizado y de alta calidad.",
     icon: "💧"
   }
 ];
@@ -45,10 +45,10 @@ const ServicesSection = () => {
     <section id="services" className={styles.services}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2>Our Services</h2>
+          <h2>Nuestros Servicios</h2>
           <div className={styles.underline}></div>
           <p className={styles.sectionDescription}>
-            Dr. Smith offers a comprehensive range of urological services using the latest evidence-based techniques and technology.
+          El Dr. Vanegas brinda servicios urológicos completos con las técnicas más innovadoras y respaldadas por la ciencia.
           </p>
         </div>
         
