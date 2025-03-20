@@ -7,7 +7,7 @@ const AboutSection = () => {
     <section id="about" className={styles.about}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2>About Dr. Smith</h2>
+          <h2>Acerca del Dr. Vanegas</h2>
           <div className={styles.underline}></div>
         </div>
         
@@ -23,37 +23,34 @@ const AboutSection = () => {
           </div>
           
           <div className={styles.aboutText}>
-            <h3>Experienced Urological Care</h3>
+            <h3>Atención Urológica Especializada</h3>
             <p>
-              Dr. John Smith is a board-certified urologist with over 15 years of experience in diagnosing and treating urological conditions. After graduating with honors from Harvard Medical School, he completed his residency at Johns Hopkins Hospital and fellowship training in minimally invasive urological surgery.
+            El Dr. Óscar Vanegas es un urólogo certificado con más de 45 años de experiencia en el diagnóstico y tratamiento de enfermedades urológicas. Graduado de la Universidad Javeriana y especializado en Urología en la Universidad del Rosario, ha trabajado en instituciones de prestigio ofreciendo un tratamiento especializado y humano a quienes lo consultan.  
             </p>
             
             <div className={styles.credentials}>
               <div className={styles.credential}>
-                <span className={styles.credentialNumber}>15+</span>
-                <span className={styles.credentialText}>Years Experience</span>
+                <span className={styles.credentialNumber}>#1</span>
+                <span className={styles.credentialText}>Especialista en calculos renales</span>
               </div>
               <div className={styles.credential}>
-                <span className={styles.credentialNumber}>5000+</span>
-                <span className={styles.credentialText}>Patients Treated</span>
+                <span className={styles.credentialNumber}>45+</span>
+                <span className={styles.credentialText}>Años de experiencia</span>
               </div>
               <div className={styles.credential}>
-                <span className={styles.credentialNumber}>200+</span>
-                <span className={styles.credentialText}>Research Papers</span>
+                <span className={styles.credentialNumber}>20.000+</span>
+                <span className={styles.credentialText}>Procedimientos Realizados</span>
               </div>
             </div>
             
-            <p>
-              Dr. Smith specializes in minimally invasive procedures, men's health, urologic oncology, and kidney stone management. He is committed to providing personalized care using the latest evidence-based techniques to ensure optimal outcomes for his patients.
-            </p>
-            
             <div className={styles.affiliations}>
-              <p><strong>Professional Affiliations:</strong></p>
+              <p><strong>Trayectoria:</strong></p>
               <ul>
-                <li>American Urological Association</li>
-                <li>Society of Urologic Oncology</li>
-                <li>Endourological Society</li>
-                <li>American Medical Association</li>
+                <li>Profesor de Urología - Universidad del Rosario - (1988 - 1990)</li>
+                <li>Hospital Federico Lleras Acosta - (1991 - 2024)</li>
+                <li>Urólogo Fundador Clínica Medicádiz (Ibagué - Colombia)</li>
+                <li>Urólogo Fundador Clínica Urocadiz (Ibagué - Colombia)</li>
+                <li>Clínica Tolima - (2024 - Presente) </li>
               </ul>
             </div>
           </div>
