@@ -5,6 +5,50 @@ import { useForm } from 'react-hook-form';
 import { format, addDays, startOfDay, addWeeks } from 'date-fns';
 import styles from './BookingSection.module.css';
 
+// Mapeo de abreviaturas de días en inglés a español
+const dayMapping = {
+  'Mon': 'Lun',
+  'Tue': 'Mar',
+  'Wed': 'Mié',
+  'Thu': 'Jue',
+  'Fri': 'Vie',
+  'Sat': 'Sáb',
+  'Sun': 'Dom'
+};
+
+// Mapeo de abreviaturas de meses en inglés a español
+const monthMapping = {
+  'Jan': 'Ene',
+  'Feb': 'Feb',
+  'Mar': 'Mar',
+  'Apr': 'Abr',
+  'May': 'May',
+  'Jun': 'Jun',
+  'Jul': 'Jul',
+  'Aug': 'Ago',
+  'Sep': 'Sep',
+  'Oct': 'Oct',
+  'Nov': 'Nov',
+  'Dec': 'Dic'
+};
+
+// Función para formatear la fecha en español
+const formatDateToSpanish = (date, formatStr) => {
+  const formatted = format(date, formatStr);
+  
+  if (formatStr === 'EEE') {
+    return dayMapping[formatted] || formatted;
+  }
+  
+  if (formatStr === 'MMM d') {
+    const parts = formatted.split(' ');
+    const month = monthMapping[parts[0]] || parts[0];
+    return `${month} ${parts[1]}`;
+  }
+  
+  return formatted;
+};
+
 const availableTimes = [
   '9:00 AM', '10:00 AM', '11:00 AM', 
   '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM'
@@ -73,41 +117,41 @@ const BookingSection = () => {
     <section id="booking" className={styles.booking}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2>Book a Consultation</h2>
+          <h2>Agendar una Consulta</h2>
           <div className={styles.underline}></div>
           <p className={styles.sectionDescription}>
-            Schedule a consultation with Dr. Smith. Please fill out the form below and select your preferred date and time.
+            Programa una consulta con el Dr. Vanegas. Por favor completa el formulario a continuación y selecciona su fecha y hora preferidas.
           </p>
         </div>
         
         {isSubmitted ? (
           <div className={styles.successMessage}>
-            <h3>Thank you for booking!</h3>
-            <p>Your appointment request has been received. Our staff will contact you shortly to confirm your appointment.</p>
+            <h3>¡Gracias por su reserva!</h3>
+            <p>Hemos recibido su solicitud de cita. Nuestro personal se pondrá en contacto con usted en breve para confirmar su cita.</p>
           </div>
         ) : (
           <div className={styles.bookingContainer}>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.bookingForm}>
               <div className={styles.formGroup}>
-                <label htmlFor="name">Full Name *</label>
+                <label htmlFor="name">Nombre Completo *</label>
                 <input 
                   type="text" 
                   id="name" 
-                  {...register("name", { required: "Name is required" })} 
+                  {...register("name", { required: "El nombre es obligatorio" })} 
                 />
                 {errors.name && <span className={styles.error}>{errors.name.message}</span>}
               </div>
               
               <div className={styles.formGroup}>
-                <label htmlFor="email">Email Address *</label>
+                <label htmlFor="email">Correo Electrónico *</label>
                 <input 
                   type="email" 
                   id="email" 
                   {...register("email", { 
-                    required: "Email is required",
+                    required: "El correo electrónico es obligatorio",
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "Invalid email address"
+                      message: "Dirección de correo electrónico inválida"
                     }
                   })} 
                 />
@@ -115,34 +159,34 @@ const BookingSection = () => {
               </div>
               
               <div className={styles.formGroup}>
-                <label htmlFor="phone">Phone Number *</label>
+                <label htmlFor="phone">Número de Teléfono *</label>
                 <input 
                   type="tel" 
                   id="phone" 
-                  {...register("phone", { required: "Phone number is required" })} 
+                  {...register("phone", { required: "El número de teléfono es obligatorio" })} 
                 />
                 {errors.phone && <span className={styles.error}>{errors.phone.message}</span>}
               </div>
               
               <div className={styles.formGroup}>
-                <label htmlFor="reason">Reason for Visit *</label>
+                <label htmlFor="reason">Motivo de la Visita *</label>
                 <select 
                   id="reason" 
-                  {...register("reason", { required: "Please select a reason" })}
+                  {...register("reason", { required: "Por favor seleccione un motivo" })}
                 >
-                  <option value="">Select a reason</option>
-                  <option value="General Consultation">General Consultation</option>
-                  <option value="Men's Health">Men's Health</option>
-                  <option value="Kidney Stones">Kidney Stones</option>
-                  <option value="Urologic Cancer">Urologic Cancer</option>
-                  <option value="Urinary Incontinence">Urinary Incontinence</option>
-                  <option value="Other">Other</option>
+                  <option value="">Seleccione un motivo</option>
+                  <option value="General Consultation">Consulta General</option>
+                  <option value="Men's Health">Salud Masculina</option>
+                  <option value="Kidney Stones">Cálculos Renales</option>
+                  <option value="Urologic Cancer">Cáncer Urológico</option>
+                  <option value="Urinary Incontinence">Incontinencia Urinaria</option>
+                  <option value="Other">Otro</option>
                 </select>
                 {errors.reason && <span className={styles.error}>{errors.reason.message}</span>}
               </div>
               
               <div className={styles.formGroup}>
-                <label htmlFor="notes">Additional Notes</label>
+                <label htmlFor="notes">Notas Adicionales</label>
                 <textarea 
                   id="notes" 
                   rows="4" 
@@ -152,7 +196,7 @@ const BookingSection = () => {
               
               <div className={styles.dateTimeSelection}>
                 <div className={styles.datePicker}>
-                  <h4>Select Date *</h4>
+                  <h4>Seleccionar Fecha *</h4>
                   <div className={styles.datesContainer}>
                     {availableDates.map((date, index) => (
                       <button
@@ -161,16 +205,16 @@ const BookingSection = () => {
                         className={`${styles.dateButton} ${selectedDate && date.getTime() === selectedDate.getTime() ? styles.selectedDate : ''}`}
                         onClick={() => handleDateClick(date)}
                       >
-                        {format(date, 'EEE')}<br />
-                        <span>{format(date, 'MMM d')}</span>
+                        {formatDateToSpanish(date, 'EEE')}<br />
+                        <span>{formatDateToSpanish(date, 'MMM d')}</span>
                       </button>
                     ))}
                   </div>
-                  {!selectedDate && <span className={styles.error}>Please select a date</span>}
+                  {!selectedDate && <span className={styles.error}>Por favor seleccione una fecha</span>}
                 </div>
                 
                 <div className={styles.timePicker}>
-                  <h4>Select Time *</h4>
+                  <h4>Seleccionar Hora *</h4>
                   <div className={styles.timesContainer}>
                     {availableTimes.map((time, index) => (
                       <button
@@ -184,7 +228,7 @@ const BookingSection = () => {
                       </button>
                     ))}
                   </div>
-                  {selectedDate && !selectedTime && <span className={styles.error}>Please select a time</span>}
+                  {selectedDate && !selectedTime && <span className={styles.error}>Por favor seleccione una hora</span>}
                 </div>
               </div>
               
@@ -192,10 +236,10 @@ const BookingSection = () => {
                 <input 
                   type="checkbox" 
                   id="consent" 
-                  {...register("consent", { required: "You must consent to proceed" })} 
+                  {...register("consent", { required: "Debe dar su consentimiento para continuar" })} 
                 />
                 <label htmlFor="consent">
-                  I consent to the processing of my personal data in accordance with the Privacy Policy
+                  Doy mi consentimiento para el procesamiento de mis datos personales de acuerdo con la Política de Privacidad
                 </label>
                 {errors.consent && <span className={styles.error}>{errors.consent.message}</span>}
               </div>
@@ -205,7 +249,7 @@ const BookingSection = () => {
                 className={`button button-primary ${styles.submitButton}`}
                 disabled={!selectedDate || !selectedTime}
               >
-                Book Appointment
+                Agendar Cita
               </button>
             </form>
           </div>

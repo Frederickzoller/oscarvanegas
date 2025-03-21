@@ -6,10 +6,10 @@ const ContactSection = () => {
     <section id="contact" className={styles.contact}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2>Contact Us</h2>
+          <h2>Contáctanos</h2>
           <div className={styles.underline}></div>
           <p className={styles.sectionDescription}>
-            Have questions or need to reach us? Contact our office via phone, email, or visit us in person.
+            ¿Tienes preguntas o necesitas comunicarte con nosotros? Contáctanos por teléfono, correo electrónico o visítanos en persona.
           </p>
         </div>
         
@@ -17,30 +17,37 @@ const ContactSection = () => {
           <div className={styles.contactInfo}>
             <div className={styles.contactCard}>
               <div className={styles.contactIcon}>📍</div>
-              <h3>Office Location</h3>
-              <p>123 Medical Plaza, Suite 456</p>
-              <p>San Francisco, CA 94123</p>
+              <h3>Ubicación</h3>
+              <p>Edificio de Consultorios de Especialistas - 302</p>
+              <p>Clinica Medicádiz sede Samaria - (Ibagué, Tolima)</p>
             </div>
             
             <div className={styles.contactCard}>
               <div className={styles.contactIcon}>📞</div>
-              <h3>Phone</h3>
-              <p>Main: (415) 555-1234</p>
+              <h3>Teléfono</h3>
+              <p>Principal: (415) 555-1234</p>
               <p>Fax: (415) 555-5678</p>
             </div>
             
             <div className={styles.contactCard}>
               <div className={styles.contactIcon}>📧</div>
-              <h3>Email</h3>
-              <p>appointments@drsmithurology.com</p>
+              <h3>Correo Electrónico</h3>
+              <p>citas@drsmithurology.com</p>
               <p>info@drsmithurology.com</p>
             </div>
             
             <div className={styles.contactCard}>
               <div className={styles.contactIcon}>🕒</div>
-              <h3>Office Hours</h3>
-              <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-              <p>Saturday - Sunday: Closed</p>
+              <h3>Horario de Atención</h3>
+              <p>Lunes - Viernes: 9:00 AM - 5:00 PM</p>
+              <p>Sábado - Domingo: Cerrado</p>
+            </div>
+            
+            <div className={styles.contactCard}>
+              <div className={styles.contactIcon}>📱</div>
+              <h3>Instagram</h3>
+              <p>@dr.vanegas.urologo</p>
+              <p>Síguenos para consejos y actualizaciones</p>
             </div>
           </div>
           
@@ -53,7 +60,7 @@ const ContactSection = () => {
               allowFullScreen="" 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              title="Office Location"
+              title="Ubicación de la Oficina"
             ></iframe>
           </div>
         </div>
