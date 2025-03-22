@@ -7,12 +7,12 @@ const faqs = [
   {
     id: 1,
     question: "¿Cómo será mi primera consulta?",
-    answer: "En tu primera visita, el Dr. Vanegas analizará tu historial médico, evaluará tus síntomas y atenderá tus inquietudes. También hará los exámenes necesarios según tu caso. Te explicará en detalle tu condición, responderá todas tus dudas y diseñará un plan de tratamiento personalizado para ti. Te recomendamos traer tus expedientes médicos, una lista de los medicamentos que tomas actualmente y la información de tu seguro."
+    answer: "En tu primera visita, el urólogo que elijas analizará tu historial médico, evaluará tus síntomas y atenderá tus inquietudes. También realizará los exámenes necesarios según tu caso. Te explicará en detalle tu condición, responderá todas tus dudas y diseñará un plan de tratamiento personalizado. Se recomienda traer tus expedientes médicos, una lista de los medicamentos que tomas actualmente y la información de tu seguro."
   },
   {
     id: 2,
     question: "¿Cómo debo prepararme para los procedimientos quirúrgicos?",
-    answer: "La preparación varía según el procedimiento. El equipo del Dr. Vanegas te dará instrucciones específicas antes de tu cita. Normalmente, es posible que debas ayunar durante un tiempo determinado, ajustar tus medicamentos y completar cualquier prueba previa que se requiera. Siempre sigue las indicaciones que te den para tu procedimiento específico."
+    answer: "La preparación dependerá del procedimiento a realizar. El equipo del especialista que elijas te proporcionará instrucciones detalladas antes de tu cita. En general, es posible que necesites ayunar por un período determinado, ajustar tu medicación o realizar estudios previos. Es fundamental seguir todas las indicaciones médicas para garantizar el éxito del procedimiento."
   },
   {
     id: 3,
@@ -22,17 +22,17 @@ const faqs = [
   {
     id: 4,
     question: "¿Cuánto dura la recuperación de los procedimientos mínimamente invasivos?",
-    answer: "El tiempo de recuperación depende del procedimiento y de tu estado de salud. La mayoría de los procedimientos urológicos mínimamente invasivos tienen tiempos de recuperación mucho más cortos que la cirugía tradicional. Muchos pacientes pueden volver a sus actividades normales en 1 o 2 semanas, aunque la recuperación completa puede tomar más tiempo. El Dr. Vanegas te dará instrucciones específicas para tu recuperación."
+    answer: "El tiempo de recuperación depende del procedimiento y de tu estado de salud. La mayoría de los procedimientos urológicos mínimamente invasivos tienen tiempos de recuperación mucho más cortos que la cirugía tradicional. Muchos pacientes pueden volver a sus actividades normales en 1 o 2 semanas, aunque la recuperación completa puede tomar más tiempo. El especialista que elijas te brindará indicaciones para tu recuperación."
   },
   {
     id: 5,
-    question: "¿Necesito una referencia para ver al Dr. Vanegas?",
-    answer: "Algunos seguros requieren una referencia para ver a un especialista, pero muchos pacientes pueden consultar al Dr. Vanegas sin necesitarla. Verifica con tu seguro si necesitas una referencia. Nuestro equipo puede ayudarte con este proceso si lo necesitas."
+    question: "¿Necesitas una referencia para tener una cita con nosotros?",
+    answer: "No siempre es necesario contar con una referencia para agendar una consulta. Ofrecemos atención tanto a pacientes particulares como a quienes cuentan con planes de medicina prepagada. Te recomendamos verificar con tu seguro si se requiere una autorización previa."
   },
   {
     id: 6,
     question: "¿Cómo puedo manejar los síntomas urológicos en casa?",
-    answer: "Aunque es esencial recibir atención médica adecuada, hay cosas que puedes hacer en casa para controlar algunos síntomas urológicos. Por ejemplo: tomar suficiente agua, seguir una dieta saludable, hacer ejercicio regularmente, mantener una buena higiene y seguir el tratamiento que te indicó el médico. El Dr. Vanegas te dará recomendaciones personalizadas según tu caso específico."
+    answer: "Aunque es esencial recibir atención médica adecuada, hay cosas que puedes hacer en casa para controlar algunos síntomas urológicos. Por ejemplo: tomar suficiente agua, seguir una dieta saludable, hacer ejercicio regularmente, mantener una buena higiene y seguir el tratamiento que te indicó el médico. El especialista de tu preferencia te proporcionará recomendaciones específicas según tu condición."
   }
 ];
 
@@ -50,7 +50,7 @@ const FAQSection = () => {
           <h2>Preguntas Frecuentes</h2>
           <div className={styles.underline}></div>
           <p className={styles.sectionDescription}>
-          Resuelve tus dudas sobre la atención urológica y la práctica del Dr. Vanegas.
+          Aclara tus dudas sobre la atención urológica y los especialistas de nuestra asociación.
           </p>
         </div>
         

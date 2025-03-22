@@ -13,7 +13,7 @@ const testimonials = [
   {
     id: 2,
     name: "Andrés Herrera",
-    text: "Me diagnosticaron un problema prostático y estaba muy preocupado. El Dr. Vanegas no solo me explicó cada paso del tratamiento, sino que también me dio confianza y tranquilidad. Su experiencia y calidez hacen que sea un médico en quien se puede confiar completamente",
+    text: "Me diagnosticaron un problema prostático y estaba muy preocupado. El Dr. Palacios no solo me explicó cada paso del tratamiento, sino que también me dio confianza y tranquilidad. Su experiencia y calidez hacen que sea un médico en quien se puede confiar completamente",
     rating: 5,
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
   {
     id: 4,
     name: "Javier Muñoz",
-    text: "Tenía muchas dudas y preocupaciones sobre mi salud, pero el Dr. Vanegas me hizo sentir seguro desde el primer momento. Su profesionalismo y trato humano marcaron la diferencia. Estoy muy agradecido por su ayuda.",
+    text: "Tenía muchas dudas y preocupaciones sobre mi salud, pero el Dr. Palacios me hizo sentir seguro desde el primer momento. Su profesionalismo y trato humano marcaron la diferencia. Estoy muy agradecido por su ayuda.",
     rating: 4,
   },
   {
@@ -37,7 +37,7 @@ const testimonials = [
   {
     id: 6,
     name: "Eduardo Fernández",
-    text: "El Dr. Vanegas tiene un enfoque muy profesional y humano. Resolvió mis problemas urológicos con gran eficacia y siempre me sentí en buenas manos. Su experiencia y conocimiento son evidentes en cada consulta.",
+    text: "El Dr. Palacios tiene un enfoque muy profesional y humano. Resolvió mis problemas urológicos con gran eficacia y siempre me sentí en buenas manos. Su experiencia y conocimiento son evidentes en cada consulta.",
     rating: 5,
   },
   {
@@ -49,7 +49,7 @@ const testimonials = [
   {
     id: 8,
     name: "Isabel Moreno",
-    text: "La empatía y profesionalismo del Dr. Vanegas son incomparables. Me explicó mi condición de manera clara y me ofreció opciones de tratamiento adaptadas a mis necesidades. Gracias a él, pude superar un problema que me afectaba desde hace años.",
+    text: "La empatía y profesionalismo del Dr. Palacios son incomparables. Me explicó mi condición de manera clara y me ofreció opciones de tratamiento adaptadas a mis necesidades. Gracias a él, pude superar un problema que me afectaba desde hace años.",
     rating: 4,
   },
   {

@@ -11,52 +11,52 @@ const Footer = () => {
         <div className={styles.footerContent}>
           <div className={styles.footerLogo}>
             <Link href="/">
-              <h2>Dr. Smith <span>Urology</span></h2>
+              <h2>Dr. Vanegas <span>Urólogo</span></h2>
             </Link>
-            <p>Expert urological care with a compassionate approach.</p>
+            <p>Atención urológica especializada con un enfoque compasivo.</p>
           </div>
           
           <div className={styles.footerLinks}>
             <div className={styles.linkColumn}>
-              <h3>Quick Links</h3>
+              <h3>Accesos Rápidos</h3>
               <ul>
-                <li><Link href="#about">About</Link></li>
-                <li><Link href="#services">Services</Link></li>
-                <li><Link href="#testimonials">Testimonials</Link></li>
-                <li><Link href="#faq">FAQ</Link></li>
-                <li><Link href="#contact">Contact</Link></li>
+                <li><Link href="#about">Sobre Mí</Link></li>
+                <li><Link href="#services">Servicios</Link></li>
+                <li><Link href="#testimonials">Testimonios</Link></li>
+                <li><Link href="#faq">Preguntas Frecuentes</Link></li>
+                <li><Link href="#contact">Contacto</Link></li>
               </ul>
             </div>
             
             <div className={styles.linkColumn}>
-              <h3>Services</h3>
+              <h3>Especialidades</h3>
               <ul>
-                <li><Link href="#services">General Urology</Link></li>
-                <li><Link href="#services">Men's Health</Link></li>
-                <li><Link href="#services">Kidney Stones</Link></li>
-                <li><Link href="#services">Urologic Oncology</Link></li>
-                <li><Link href="#services">Minimally Invasive Surgery</Link></li>
+                <li><Link href="#services">Urología General</Link></li>
+                <li><Link href="#services">Salud Masculina</Link></li>
+                <li><Link href="#services">Cálculos Renales</Link></li>
+                <li><Link href="#services">Oncología Urológica</Link></li>
+                <li><Link href="#services">Cirugía Mínimamente Invasiva</Link></li>
               </ul>
             </div>
             
             <div className={styles.linkColumn}>
-              <h3>Contact</h3>
+              <h3>Contacto</h3>
               <ul>
-                <li>123 Medical Plaza, Suite 456</li>
+                <li>Plaza Médica 123, Consultorio 456</li>
                 <li>San Francisco, CA 94123</li>
                 <li>(415) 555-1234</li>
-                <li>info@drsmithurology.com</li>
+                <li>contacto@drvanegas.com</li>
               </ul>
             </div>
           </div>
         </div>
         
         <div className={styles.footerBottom}>
-          <p>&copy; {currentYear} Dr. Smith Urology. All rights reserved.</p>
+          <p>&copy; {currentYear} Dr. Vanegas Urología. Todos los derechos reservados.</p>
           <div className={styles.footerBottomLinks}>
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms of Service</Link>
-            <Link href="/accessibility">Accessibility</Link>
+            <Link href="/privacy">Política de Privacidad</Link>
+            <Link href="/terms">Términos de Servicio</Link>
+            <Link href="/accessibility">Accesibilidad</Link>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
-            <h1>Atención Urológica Especializada Para El Cuidado De Su Salud</h1>
+            <h1>Atención Urológica Especializada Para El Cuidado De Tu Salud</h1>
             <p>
             Nuestro enfoque en urología combina experiencia, personalización y tecnología de última generación para lograr los mejores resultados y el bienestar del paciente. 
             </p>
