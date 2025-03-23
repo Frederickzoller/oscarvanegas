@@ -45,16 +45,18 @@ const Header = () => {
       <div className={`container ${styles.headerContainer}`}>
         <div className={styles.logo}>
           <Link href="/" onClick={() => scrollToSection('')}>
-            <Image 
-              src="/@logo.png" 
-              alt="Logo" 
-              width={50} 
-              height={50} 
-              className={styles.logoImage} 
-            />
-            <h2>
-              UMI <span>Urologia</span>
-            </h2>
+            <div className={styles.logoContainer}>
+              <Image 
+                src="/logo.png" 
+                alt="Logo" 
+                width={250} 
+                height={250} 
+                className={styles.logoImage} 
+              />
+              <h2>
+                UMI <span>Urologia</span>
+              </h2>
+            </div>
           </Link>
         </div>
         
