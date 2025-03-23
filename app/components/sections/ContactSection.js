@@ -25,14 +25,14 @@ const ContactSection = () => {
             <div className={styles.contactCard}>
               <div className={styles.contactIcon}>📞</div>
               <h3>Teléfono</h3>
-              <p>Principal: (415) 555-1234</p>
-              <p>Fax: (415) 555-5678</p>
+              <p>Principal: </p>
+              <p>(+57) 312-5371546</p>
             </div>
             
             <div className={styles.contactCard}>
               <div className={styles.contactIcon}>📧</div>
               <h3>Correo Electrónico</h3>
-              <p>citas@drsmithurology.com</p>
+              
               <p>info@drsmithurology.com</p>
             </div>
             
@@ -53,7 +53,7 @@ const ContactSection = () => {
           
           <div className={styles.mapContainer}>
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50470.95891290086!2d-122.45775026963262!3d37.773134578318506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1614122666747!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.9238590049044!2d-75.18067792470005!3d4.425286695548921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c5f70b052c9f%3A0x1726946f4a5d2746!2sEdificio%20de%20Consultorios%20de%20Especialistas%20-%20Medic%C3%A1diz!5e0!3m2!1ses!2sco!4v1742605579350!5m2!1ses!2sco" 
               width="100%" 
               height="450" 
               style={{ border: 0 }} 

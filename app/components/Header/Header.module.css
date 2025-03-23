@@ -23,7 +23,14 @@
 }
 
 .logo span {
-  color: #0070f3;
+  color: blue;
+}
+
+.logoImage {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  height: auto;
+  width: 50px;
 }
 
 .nav ul {

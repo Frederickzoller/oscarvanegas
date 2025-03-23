@@ -120,7 +120,7 @@ const BookingSection = () => {
           <h2>Agendar una Consulta</h2>
           <div className={styles.underline}></div>
           <p className={styles.sectionDescription}>
-            Programa una consulta con el Dr. Vanegas. Por favor completa el formulario a continuación y selecciona su fecha y hora preferidas.
+            Programa una consulta con nosotros. Por favor completa el formulario a continuación y selecciona su fecha y hora preferidas.
           </p>
         </div>
         
@@ -174,7 +174,7 @@ const BookingSection = () => {
                   id="reason" 
                   {...register("reason", { required: "Por favor seleccione un motivo" })}
                 >
-                  <option value="">Seleccione un motivo</option>
+                  <option value="">Selecciona tu motivo de la Visita</option>
                   <option value="General Consultation">Consulta General</option>
                   <option value="Men's Health">Salud Masculina</option>
                   <option value="Kidney Stones">Cálculos Renales</option>

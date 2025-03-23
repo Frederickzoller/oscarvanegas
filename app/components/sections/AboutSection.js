@@ -7,7 +7,7 @@ const AboutSection = () => {
     <section id="about" className={styles.about}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2>Acerca de </h2>
+          <h2>Acerca de UMI Urologia</h2>
           <div className={styles.underline}></div>
         </div>
         
@@ -23,7 +23,7 @@ const AboutSection = () => {
           </div>
           
           <div className={styles.aboutText}>
-            <h3>Atención Urológica Especializada</h3>
+            <h3>Urologia Minimamente Invasiva</h3>
             <p>
             En nuestra asociación, contamos con un equipo de especialistas altamente calificados y con una sólida trayectoria en el campo de la urología. Nuestro equipo está conformado por el Dr. Óscar Vanegas, egresado de la Universidad Javeriana y especialista en urología de la Universidad del Rosario, fundador y urólogo de la Clínica Medicadiz, con más de 45 años de experiencia, y el Dr. César Palacios, egresado de la Universidad de Buenos Aires, Argentina, donde se especializó como médico endourólogo, con una destacada trayectoria en procedimientos urológicos avanzados. Nuestro compromiso es brindar atención médica de excelencia, con un alto estándar profesional y un enfoque centrado en la seguridad y el bienestar de cada paciente.  
             </p>
@@ -31,7 +31,7 @@ const AboutSection = () => {
             <div className={styles.credentials}>
               <div className={styles.credential}>
                 <span className={styles.credentialNumber}>#1</span>
-                <span className={styles.credentialText}>En cirugia urologica avanzada</span>
+                <span className={styles.credentialText}>Urologia Minimamente Invasiva</span>
               </div>
               <div className={styles.credential}>
                 <span className={styles.credentialNumber}>70+</span>

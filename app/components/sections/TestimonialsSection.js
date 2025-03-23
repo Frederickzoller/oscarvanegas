@@ -80,7 +80,7 @@ const TestimonialsSection = () => {
           <h2>Testimonio de pacientes</h2>
           <div className={styles.underline}></div>
           <p className={styles.sectionDescription}>
-            No solo lo decimos nosotros. Conoce lo que opinan nuestros pacientes sobre la atención del Dr. Vanegas.
+            No solo lo decimos nosotros. Conoce lo que opinan nuestros pacientes sobre la atención de nuestros urologos.
           </p>
         </div>
         

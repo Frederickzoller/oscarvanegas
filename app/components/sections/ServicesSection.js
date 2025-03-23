@@ -151,7 +151,7 @@ const ServicesSection = () => {
           <h2>Nuestros Servicios</h2>
           <div className={styles.underline}></div>
           <p className={styles.sectionDescription}>
-          El Dr. Vanegas brinda servicios urológicos completos con las técnicas más innovadoras y respaldadas por la ciencia.
+          Brindamos servicios urológicos completos con las técnicas más innovadoras y respaldadas por la ciencia.
           </p>
         </div>
         

@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Dr. Smith Urology - Expert Urological Care & Consultations",
-  description: "Dr. Smith is a board-certified urologist offering private consultations and specialized urological services. Book your appointment today.",
-  keywords: "urologist, urology, private consultation, men's health, urological services",
+  title: "UMI Urologia - Atencion y Consultas Urologicas",
+  description: "Nuestra asociación de urólogos certificados ofrece consultas privadas y servicios especializados. Agenda tu cita hoy.",
+  keywords: "Urólogo, urología, consulta privada, salud masculina, servicios urológicos.",
 };
 
 export default function RootLayout({ children }) {

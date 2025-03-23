@@ -11,9 +11,9 @@ const Footer = () => {
         <div className={styles.footerContent}>
           <div className={styles.footerLogo}>
             <Link href="/">
-              <h2>Dr. Vanegas <span>Urólogo</span></h2>
+              <h2>UMI  <span>Urólogia</span></h2>
             </Link>
-            <p>Atención urológica especializada con un enfoque compasivo.</p>
+            <p>Urologia Minimamente Invasiva.</p>
           </div>
           
           <div className={styles.footerLinks}>
@@ -42,17 +42,17 @@ const Footer = () => {
             <div className={styles.linkColumn}>
               <h3>Contacto</h3>
               <ul>
-                <li>Plaza Médica 123, Consultorio 456</li>
-                <li>San Francisco, CA 94123</li>
-                <li>(415) 555-1234</li>
-                <li>contacto@drvanegas.com</li>
+                <li>Edificio de Consultorios de Especialistas - 302</li>
+                <li>Clinica Medicádiz sede Samaria - (Ibagué, Tolima)</li>
+                <li>(+57) 312-5371546</li>
+                <li></li>
               </ul>
             </div>
           </div>
         </div>
         
         <div className={styles.footerBottom}>
-          <p>&copy; {currentYear} Dr. Vanegas Urología. Todos los derechos reservados.</p>
+          <p>&copy; {currentYear} UMI Urologia Todos los derechos reservados.</p>
           <div className={styles.footerBottomLinks}>
             <Link href="/privacy">Política de Privacidad</Link>
             <Link href="/terms">Términos de Servicio</Link>

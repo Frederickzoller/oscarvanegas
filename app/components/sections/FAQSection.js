@@ -7,12 +7,12 @@ const faqs = [
   {
     id: 1,
     question: "¿Cómo será mi primera consulta?",
-    answer: "En tu primera visita, el urólogo que elijas analizará tu historial médico, evaluará tus síntomas y atenderá tus inquietudes. También realizará los exámenes necesarios según tu caso. Te explicará en detalle tu condición, responderá todas tus dudas y diseñará un plan de tratamiento personalizado. Se recomienda traer tus expedientes médicos, una lista de los medicamentos que tomas actualmente y la información de tu seguro."
+    answer: "En tu primera visita, el urólogo de turno analizará tu historial médico, evaluará tus síntomas y atenderá tus inquietudes. También realizará los exámenes necesarios según tu caso. Te explicará en detalle tu condición, responderá todas tus dudas y diseñará un plan de tratamiento personalizado. Se recomienda traer tus expedientes médicos, una lista de los medicamentos que tomas actualmente y la información de tu seguro."
   },
   {
     id: 2,
     question: "¿Cómo debo prepararme para los procedimientos quirúrgicos?",
-    answer: "La preparación dependerá del procedimiento a realizar. El equipo del especialista que elijas te proporcionará instrucciones detalladas antes de tu cita. En general, es posible que necesites ayunar por un período determinado, ajustar tu medicación o realizar estudios previos. Es fundamental seguir todas las indicaciones médicas para garantizar el éxito del procedimiento."
+    answer: "La preparación dependerá del procedimiento a realizar. El equipo del especialista de turno te proporcionará instrucciones detalladas antes de tu cita. En general, es posible que necesites ayunar por un período determinado, ajustar tu medicación o realizar estudios previos. Es fundamental seguir todas las indicaciones médicas para garantizar el éxito del procedimiento."
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const faqs = [
   {
     id: 4,
     question: "¿Cuánto dura la recuperación de los procedimientos mínimamente invasivos?",
-    answer: "El tiempo de recuperación depende del procedimiento y de tu estado de salud. La mayoría de los procedimientos urológicos mínimamente invasivos tienen tiempos de recuperación mucho más cortos que la cirugía tradicional. Muchos pacientes pueden volver a sus actividades normales en 1 o 2 semanas, aunque la recuperación completa puede tomar más tiempo. El especialista que elijas te brindará indicaciones para tu recuperación."
+    answer: "El tiempo de recuperación depende del procedimiento y de tu estado de salud. La mayoría de los procedimientos urológicos mínimamente invasivos tienen tiempos de recuperación mucho más cortos que la cirugía tradicional. Muchos pacientes pueden volver a sus actividades normales en 1 o 2 semanas, aunque la recuperación completa puede tomar más tiempo. El especialista de turno te brindará indicaciones para tu recuperación."
   },
   {
     id: 5,
@@ -32,7 +32,7 @@ const faqs = [
   {
     id: 6,
     question: "¿Cómo puedo manejar los síntomas urológicos en casa?",
-    answer: "Aunque es esencial recibir atención médica adecuada, hay cosas que puedes hacer en casa para controlar algunos síntomas urológicos. Por ejemplo: tomar suficiente agua, seguir una dieta saludable, hacer ejercicio regularmente, mantener una buena higiene y seguir el tratamiento que te indicó el médico. El especialista de tu preferencia te proporcionará recomendaciones específicas según tu condición."
+    answer: "Aunque es esencial recibir atención médica adecuada, hay cosas que puedes hacer en casa para controlar algunos síntomas urológicos. Por ejemplo: tomar suficiente agua, seguir una dieta saludable, hacer ejercicio regularmente, mantener una buena higiene y seguir el tratamiento que te indicó el médico. El especialista de turno te proporcionará recomendaciones específicas según tu condición."
   }
 ];
 
