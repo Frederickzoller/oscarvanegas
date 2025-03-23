@@ -16,8 +16,8 @@ const faqs = [
   },
   {
     id: 3,
-    question: "What insurance plans do you accept?",
-    answer: "We accept most major insurance plans including Medicare, Blue Cross Blue Shield, Aetna, Cigna, and UnitedHealthcare. Our administrative team will verify your coverage before your appointment and discuss any potential out-of-pocket costs. Please bring your insurance card to your appointment."
+    question: "¿Cuáles Prepagadas aceptamos?",
+    answer: "Aceptamos la mayoría de los planes de seguro importantes, incluyendo Medicare, Blue Cross Blue Shield, Aetna, Cigna y UnitedHealthcare. Nuestro equipo administrativo verificará tu cobertura antes de tu cita y discutirá cualquier costo adicional que puedas tener. Por favor, trae tu tarjeta de seguro a tu cita."
   },
   {
     id: 4,

@@ -11,12 +11,11 @@ const Header = () => {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      // Use requestAnimationFrame for smoother scrolling
-      window.requestAnimationFrame(() => {
-        window.scrollTo({
-          top: section.offsetTop - 70, // Adjust the offset as needed
-          behavior: 'smooth'
-        });
+      // Use scrollIntoView for smoother scrolling
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start', // Align to the top of the section
+        inline: 'nearest'
       });
     }
   };
@@ -40,6 +39,17 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Handle any additional scroll-related logic here if needed
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <header className={styles.header}>
       <div className={`container ${styles.headerContainer}`}>
@@ -49,8 +59,8 @@ const Header = () => {
               <Image 
                 src="/logo.png" 
                 alt="Logo" 
-                width={250} 
-                height={250} 
+                width={675} 
+                height={675} 
                 className={styles.logoImage} 
               />
               <h2>

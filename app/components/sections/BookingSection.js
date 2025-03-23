@@ -169,18 +169,19 @@ const BookingSection = () => {
               </div>
               
               <div className={styles.formGroup}>
-                <label htmlFor="reason">Motivo de la Visita *</label>
+                <label htmlFor="reason">Motivo de tu Visita *</label>
                 <select 
                   id="reason" 
                   {...register("reason", { required: "Por favor seleccione un motivo" })}
                 >
-                  <option value="">Selecciona tu motivo de la Visita</option>
-                  <option value="General Consultation">Consulta General</option>
-                  <option value="Men's Health">Salud Masculina</option>
-                  <option value="Kidney Stones">Cálculos Renales</option>
-                  <option value="Urologic Cancer">Cáncer Urológico</option>
-                  <option value="Urinary Incontinence">Incontinencia Urinaria</option>
-                  <option value="Other">Otro</option>
+                  <option value="">Selecciona el motivo de tu visita</option>
+                  <option value="General Consultation">Urologia General</option>
+                  <option value="Men's Health">Terapias Intravesicales</option>
+                  <option value="Kidney Stones">Tratamiento Cálculos Urinarios</option>
+                  <option value="Urologic Cancer">Cirugía Urológica General</option>
+                  <option value="Urinary Incontinence">Cirugías Reconstructivas y Funcionales</option>
+                  <option value="Other">Cirugía Oncológica y Tumores Urológicos</option>
+                  <option value="Follow-up Appointment">Otro</option>
                 </select>
                 {errors.reason && <span className={styles.error}>{errors.reason.message}</span>}
               </div>

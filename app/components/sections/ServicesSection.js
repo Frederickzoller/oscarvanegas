@@ -6,7 +6,7 @@ import styles from './ServicesSection.module.css';
 const services = [
   {
     id: 1,
-    title: "Atención y Diagnóstico Urológico",
+    title: "Urologia General",
     description: "Consultas especializadas y estudios diagnósticos avanzados para la detección y manejo de enfermedades urológicas.",
     icon: "🔬",
     procedures: [
@@ -32,7 +32,7 @@ const services = [
   },
   {
     id: 3,
-    title: "Tratamiento Quirúrgico de Cálculos Urinarios",
+    title: "Tratamiento Cálculos Urinarios",
     description: "Procedimientos mínimamente invasivos y láser para la eliminación de cálculos en riñón, uréter y vejiga.",
     icon: "👨‍⚕️",
     procedures: [
