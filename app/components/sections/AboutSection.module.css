@@ -21,12 +21,15 @@
   
   .aboutContent {
     display: flex;
+    align-items: flex-start;
     gap: 3rem;
-    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
   }
   
   .aboutImage {
-    flex: 1;
+    margin-right: 20px;
+    flex-shrink: 0;
   }
   
   .doctorOfficeImage {
@@ -56,11 +59,23 @@
     display: flex;
     justify-content: space-between;
     margin: 2rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
   }
   
   .credential {
     text-align: center;
     padding: 1rem;
+    flex: 1 1 120px;
+    border: 6px solid var(--primary);
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+    min-width: 150px;
+  }
+  
+  .credential:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
   .credentialNumber {
@@ -84,27 +99,88 @@
     margin-bottom: 0.5rem;
   }
   
-  @media (max-width: 968px) {
+  .additionalImageContainer {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  .hospitalImageContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border: 2px solid red;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .additionalImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
     .aboutContent {
-      flex-direction: column;
+        padding: 0;
     }
-    
-    .credentials {
-      flex-wrap: wrap;
+
+    .sectionHeader h2 {
+        font-size: 2rem;
     }
-    
-    .credential {
-      flex: 1;
-      min-width: 120px;
+
+    .aboutText h3 {
+        font-size: 1.5rem;
+    }
+
+    .credentialNumber {
+        font-size: 2rem;
     }
   }
   
-  @media (max-width: 576px) {
-    .sectionHeader h2 {
-      font-size: 2rem;
-    }
-    
-    .credentialNumber {
-      font-size: 2rem;
-    }
+  .credentialsBelowImage {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .credential {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .credentialNumber {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .credentialText {
+    color: var(--text-light);
+  }
+  
+  .credentialsCentered {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 2rem;
+  }
+  
+  .credential {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .credentialNumber {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .credentialText {
+    color: var(--text-light);
   }

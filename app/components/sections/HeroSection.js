@@ -24,10 +24,11 @@ const HeroSection = () => {
           </div>
           <div className={styles.heroImage}>
             <Image 
-              src="/doctor.jpg" 
-              alt="Dr. Vanegas - Urologo" 
-              width={500} 
-              height={600} 
+              src="/Docs.jpeg"
+              alt="Doctores"
+              width={800}
+              height={600}
+              layout="responsive"
               priority
               className={styles.doctorImage}
             />

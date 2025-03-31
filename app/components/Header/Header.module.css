@@ -106,7 +106,13 @@
 
 @media (max-width: 768px) {
   .headerContainer {
-    width: 90%;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .logoContainer {
+    margin-left: 0;
+    justify-content: center;
   }
   
   .mobileMenuButton {
@@ -119,7 +125,7 @@
     left: 0;
     width: 100%;
     background-color: white;
-    padding: 1rem 0;
+    padding: 1rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     transform: translateY(-100%);
     opacity: 0;
@@ -139,7 +145,7 @@
   }
   
   .nav li {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
   
   .bookBtn {
