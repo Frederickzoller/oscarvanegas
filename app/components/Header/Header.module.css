@@ -25,7 +25,7 @@
 }
 
 .logo span {
-  color: blue;
+  color: rgb(0, 0, 255);
 }
 
 .logoContainer {
@@ -76,7 +76,7 @@
 }
 
 .bookBtn a:hover {
-  background-color: #0051a8;
+  background-color: rgb(0, 81, 168);
 }
 
 .mobileMenuButton {
@@ -85,9 +85,14 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
+  height: 40px;
+  width: 40px;
+  margin-left: -30%;
+  margin-top: 5px;
+}
+
+.mobileMenuButton img {
+  fill: #0070f3;
 }
 
 .mobileMenuButton span {

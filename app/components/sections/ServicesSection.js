@@ -60,7 +60,7 @@ const services = [
   {
     id: 5,
     title: "Cirugías Reconstructivas y Funcionales",
-    description: "Tratamientos quirúrgicos para cánceres urológicos y lesiones tumorales.",
+    description: "Tratamientos para cánceres urológicos y lesiones tumorales.",
     icon: "🔄",
     procedures: [
       "Cistouretropexia con cabestrillo",

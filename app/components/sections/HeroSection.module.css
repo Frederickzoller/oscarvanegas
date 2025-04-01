@@ -91,4 +91,10 @@
     .heroText h1 {
       font-size: 2rem;
     }
+    
+    .doctorImage {
+      max-width: 100%;
+      height: auto;
+      width: 90%;
+    }
   }

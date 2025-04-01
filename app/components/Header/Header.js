@@ -75,9 +75,13 @@ const Header = () => {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Open menu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <Image 
+            src="/ham.png" 
+            alt="Menu" 
+            width={25} 
+            height={25} 
+            style={{ marginTop: '-5px' }}
+          />
         </button>
         
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
