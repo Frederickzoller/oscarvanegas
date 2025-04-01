@@ -19,6 +19,7 @@ const AboutSection = () => {
               width={500} 
               height={400}
               className={styles.doctorOfficeImage}
+              priority
             />
           </div>
           
